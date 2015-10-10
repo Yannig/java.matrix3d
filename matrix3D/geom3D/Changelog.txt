@@ -1,0 +1,228 @@
+Liste de modifications apportées pour chacune des classes du répertoire matrix3D.geom3D
+
+------------------------------------------
+DrawableElement
+------------------------------------------
+Création : le 21 Novembre 2001 : version d'origine de l'interface (bon anniversaire Olivier demain !)
+Modifications :
+  le 22 Novembre 2001 par Perré Y. :
+   - Joyeux anniversaire Lolo !
+   - l'interface devient une classe et hérite directement de PointVector
+   - beaucoup de champ privé devienne public (c'est free, c'est open maintenant)
+
+------------------------------------------
+Line
+------------------------------------------
+Création : le 21 novembre 2001 par Perré Y.
+Modifications :
+  le 22 novembre 2001 :
+  - Dans le but d'unifier les surfaces, les lignes et les choses à venir,
+    beaucoup de chose se sont retrouvées dans la classe DrawableElement
+
+------------------------------------------
+Shape
+------------------------------------------
+Création : octobre 2001 par Perré Y.
+Modifications :
+ le 28 Octobre 2001 par Perré Y. (v0.1) :
+   - La méthode transform de la classe Point n'utilise plus de booleen pour indiquer la duplication
+     -> le point stocke sa propre transformation.
+ le 7 Novembre 2001 par Perré Y. (v0.2.0) :
+   - Suppression du lien hiérarchique avec Point et Node
+   - Suppression de la classe Node (utilisé auparavant pour la représentation en fil de fer)
+   - Création et Utilisation de la classe Surface
+ le 8 Novembre 2001 par Perré Y. (v0.2.1) :
+   - Transformation de la figure
+   - Dessin de la figure
+   - Association à la figure d'une transformation affine correspondante
+ le 12 Novembre par Perré Y. (v0.2.1c) :
+   - Changement de l'attribut _surfaces (private -> public) pour optimisation (accès de Renderer)
+   - Ajout de la possibilité de transformer la figure par rapport à une caméra
+   - Changement de transformation affine possible
+ le 15 novembre par P.Y. (v0.2.2a) :
+   - Ajout d'un champ type pour convertir l'objet selon besoin (Fil de fer, normal, transparent etc)
+ le 19 novembre par P.Y (v0.3.0) :
+   - La classe hérite maintenant de PointVector pour extérioriser les actions effectuées sur
+     les points (ajouts, suppression etc.).
+ le 3 décembre par P.Y. (v0.3.2) :
+   - Les transformations se font avec la méthode doTransf(int time);
+ le 4 décembre par P.Y. (v0.3.2) :
+   - implantation des transformations affines dans la classe
+ le 11 décembre par P.Y. :
+   - changement de sens de la norme des surfaces de la figure
+
+------------------------------------------
+Surface
+------------------------------------------
+Création : le 20 octobre 2001 par Perré Y.
+Modifications :
+ le 28 Octobre 2001 par Perré Y. (v0.1.2) :
+   - Prise en compte de la visibilitée des surfaces à l'aide de la norme à la surface.
+     Si positive, elle est visible
+ le 29 Octobre 2001 par Perré Y. (v0.1.3) :
+   - Suppression de la duplication des points
+ le 7 Novembre 2001 par Perré Y. (v0.2.0) :
+   - Nouvelle mouture de la classe pour fonctionner avec la version v.0.2.0 de Figure
+ le 12 Novembre 2001 par Perré Y. (v0.2.1) :
+   - Calcul de la distance moyenne de la surface par rapport à 0
+   - Création d'une méthode pour déterminer si la surface est visible
+ le 15 Novembre 2001 par Perré Y. (v0.2.2) :
+   - Ajout d'un lien vers l'objet parent Figure.
+   - Possibilité de se référer au père pour déduire sa couleur ou son mode de rendu
+ le 19 novembre 2001 par Perré Y. (v0.3.0) :
+   - Héritage de la classe PointVector pour extérioriser la manipulation des points.
+ le 21 Novembre par Perré Y. (v0.4.5) :
+   - calcul l'angle d'un point par rapport à un autre (sur le plan 2D)
+ le 22 Novembre par Perré Y. (v0.4.6) :
+   - prise en compte du clockwise pour rendu des surfaces (on ignore les surfaces
+     qui ont leurs points projetés qui sont en anticlock wise)
+   - ajout des constructeurs correspondant
+   - ajout de la classe DrawableElement
+   - grande exportation des fonctions de relation avec le père et des caractéristiques
+     de la surface dans la classe DrawableElement.
+ le 11 décembre par P.Y. :
+   - possibilité de changer le sens trigo de la surface (méthode inverse())
+   - changement de sens de la norme à la surface pour la lumière (dans le cas d'un objet qui irradie 
+     comme le soleil par exemple)
+
+------------------------------------------
+Vertex
+------------------------------------------
+Création : octobre 2001 par Perré Y.
+Modifications :
+ le 24 octobre par Perré Y. (v0.4.1) :
+   - Le point stocke sa propre transformation : avantage de consommation moindre 
+     de mémoire et on retrouve facilement le point transformée
+   - Modification de la méthode set(Point p).
+   - Remodelage de la classe pour correspondre à la nouvelle mouture de Matrix (v0.4.2)
+ le 6 novembre par Perré Y. (v0.4.3) :
+   - Intégration et élimination de la sous classe Vector.
+ le 7 novembre par Perré Y. (v.0.4.4) :
+   - Possibilité d'ajouter un point.
+ le 8 novembre par Perré Y. (v.0.4.4b) :
+   - Possibilité de retrancher un point.
+   - Ajout d'une méthode de calcul directe de la projection du point avec les offsets etc.
+ le 15 novembre par Perré Y. (v.0.4.4c) :
+   - calcul de la distance par rapport à l'origine (pour tri)
+ le 27 novembre par Perré Y. (v0.4.5b) :
+   - modification de l'initialisation
+ le 28 novembre par Perré Y. (v0.4.5c) :
+   - possibilité de conserver les modifications faîtes sur un point (non utilisation
+     de mTransf).
+ le 29 novembre par Perré Y. (v0.5) :
+   - Réorganisation des classes et nettoyage ...
+
+Liste de modifications apportées pour chacune des classes du répertoire matrix3D.affineTransform3D
+Remarque du 7 février : tout a été transféré sous matrix3D.geom3D
+
+------------------------------------------
+AffineTransform3D
+------------------------------------------
+Création : Octobre 2001 par Perré Y.
+Modifications :
+ le 24 octobre 2001 par Perré Y. :
+   - Intégration de toutes les classes de transformation dans la classe Matrix.
+   - Instanciation simplifiée des différents types de matrice.
+ le 6 Novembre 2001 par Perré Y. :
+   - Toutes les classes de transformations sont finalement extériorisées
+ le 13 Novembre 2001 par Perré Y. (v0.5.0):
+   - Ajout de la méthode initHasIdentity() permettant d'initialiser la classe en matrice identité
+ le 28 novembre 2001 par Perré Y. (v0.5.1):
+   - Modification des attributs internes de la classe.
+   - Modification du format d'affichage (méthode toString).
+ le 29 novembre par Perré Y. (v0.6) :
+   - la classe s'appelle maintenant AffineTransform
+   - Réorganisation des classes et nettoyage ...
+ le 3 décembre 2001 par Perré Y. (v0.6.1) :
+   - possibilité de consulter les propriétés de la matrice
+ le 7 février 2002 par Perré Y. (v0.7.1) :
+   - toutes les classes sont maintenant intégrés dans la classe AffineTransformation3D. Rotation,
+     Homothety, etc. ont toutes étés supprimées.
+   - migration dans le paquetage matrix3D.geom3D
+
+------------------------------------------
+Homothety
+------------------------------------------
+Création : le 19 novembre 2001 par Perré Y.
+Modifications :
+ le 29 novembre par Perré Y. (v0.6) :
+   - Réorganisation des classes et nettoyage ...
+ le 7 février 2002 par Perré Y. (v0.7.1) :
+   - Classe supprimée (intégré directement dans AffineTransform3D)
+------------------------------------------
+Identity
+------------------------------------------
+Création : Octobre 2001 par Perré Y.
+Modifications :
+ le 7 Novembre 2001 par Perré Y. :
+   - Modification de la hiérarchie des classes -> la classe hérite maintenant de Homothety
+ le 29 novembre par Perré Y. (v0.6) :
+   - Réorganisation des classes et nettoyage ...
+ le 7 février 2002 par Perré Y. (v0.7.1) :
+   - Classe supprimée (intégré directement dans AffineTransform3D)
+
+------------------------------------------
+Rotation
+------------------------------------------
+Création : Octobre 2001 par Perré Y.
+Modifications :
+ le 7 Novembre 2001 par Perré Y. :
+   - modification de la hiérarchie de la classe -> la classe hérite
+     maintenant de Identity à la place de Matrix.
+   - Ajout de la possibilité d'initialiser la Matrice à l'aide du contenu
+     d'un point.
+   - Modification de la méthode d'intialisation : on doit forcément donner
+     le centre de la rotation. Si centre à l'origine, passer la référence
+     null.
+   - Méthodes de consultation des composantes de la rotation
+ le 13 novembre 2001 par Perré Y. :
+   - Utilisation de buffer pour les transformations -> Moins
+     de consommation d'objets. (v0.3.2b)
+ le 15 Novembre 2001 par Perré Y. :
+   - Modification de la création de la rotation autour d'un point
+ le 29 novembre par Perré Y. (v0.6) :
+   - Réorganisation des classes et nettoyage ...
+ le 7 février 2002 par Perré Y. (v0.7.1) :
+   - Classe supprimée (intégré directement dans AffineTransform3D)
+
+------------------------------------------
+Shear
+------------------------------------------
+Création : le 29 octobre 2001 par Perré Y.
+Modifications :
+ le 7 février 2002 par Perré Y. (v0.7.1) :
+   - Classe supprimée (intégré directement dans AffineTransform3D)
+
+------------------------------------------
+Symmetry
+------------------------------------------
+Création : Octobre 2001 par Perré Y.
+Modifications :
+ le 7 Novembre 2001 par Perré Y. :
+   - Modification de la hiérarchie des classes -> la classe hérite maintenant de Identity
+   - Modification de l'ordre de symétrie : True = inversion
+ le 29 novembre par Perré Y. (v0.6) :
+   - Réorganisation des classes et nettoyage ...
+ le 7 février 2002 par Perré Y. (v0.7.1) :
+   - Classe supprimée (intégré directement dans AffineTransform3D)
+
+------------------------------------------
+PointVector :
+------------------------------------------
+Création : Octobre 2001 par Perré Y.
+Modifications :
+ le 7-8 Novembre 2001 (v0.3.3) :
+   - Modification de l'initiation sans paramètres.
+   - Modification de l'héritage de la classe : Elle hérite de Identity 
+     en lieu et place de Matrix.
+   - Ajout de la possibilité d'initialiser la translation avec le contenu
+     d'un point.
+   - Ajout des opérations permises avec un point avec une figure (en prenant
+     le centre de la figure).
+   - Possibilité d'ajouter/retrancher les valeurs d'un point
+ le 15 Novembre 2001 (v0.3.3b) :
+   - La translation se fait maintenant à partir des valeurs non transformés
+ le 29 novembre par Perré Y. (v0.6) :
+    - Réorganisation des classes et nettoyage ...
+ le 7 février 2002 par Perré Y. (v0.7.1) :
+   - Classe supprimée (intégré directement dans AffineTransform3D)

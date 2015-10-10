@@ -1,0 +1,37 @@
+Liste de modifications apportées pour chacune des classes du répertoire matrix3D.renderer
+
+------------------------------------------
+Camera
+------------------------------------------
+Création : le 20 octobre 2001 par Perré Y.
+Modifications :
+ le 13 novembre 2001 par Perré Y. :
+   - La caméra utilise maintenant un buffer de rendu (v0.1.1)
+ le 27 novembre 2001 par Perré Y. :
+   - On bufferise le rendu (v0.2.1). Merci pour les yeux !
+ le 12 décembre 2001 par Perré Y. :
+   - La taille du buffer de rendu se recalibre automatiquement
+   - On ne fait qu'une seul fois le calcul de déplacement de la caméra
+
+------------------------------------------
+Engine
+------------------------------------------
+Création : le 12 novembre 2001 par Perré Y.
+Modifications :
+ le 14 novembre 2001 par Perré Y. :
+   - Ajout de la gestion du rendu des Surfaces (fil de fer etc...)
+   - Possibilité de supprimer un objet
+ le 22 novembre 2001 par Perré Y. :
+   - extériorisation de la manipulation des listes d'objets
+   - héritage de la classe ObjectVector.
+ le 26 novembre 2001 par Perré Y. :
+   - Début d'intégration de la lumière
+ le 12 décembre 2001 par Perré Y. :
+   - Gestion compléte de la lumière (ambiante, diffuse, point de lumière)
+   - Intégration propre dans une classe consacrée aux effets
+
+------------------------------------------
+Timer
+------------------------------------------
+Création : le 25 novembre 2001 par Perré Y.
+Modifications :

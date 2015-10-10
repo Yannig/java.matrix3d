@@ -1,0 +1,36 @@
+Liste de modifications apportées au paquetage matrix3D.
+
+Avant :
+Version 0.1 :
+Création de la classe Matrix. Déboire avec les transformations affines.
+
+Octobre 2001
+Version 0.2&0.3 :
+Recherche sur les transformations affines, le rendu en mode fil de fer.
+Arrachage de cheveux avec la lumière et la rotation.
+Version 0.4 :
+Changement de mode de rendu -> mode face pleine. Création de la classe Surface.
+
+Novembre 2001
+Version 0.5 :
+Recherche sur les algos de rendu au niveau de la lumière, du calcul des faces
+visibles, Création des structures de stockage des points, essai de la classe
+Graphics et Graphics2D de Java. Début de développement du moteur de rendu à 
+l'aide de la classe Timer de java.
+
+Decembre 2001
+Version 0.6 :
+ - Bufferisation des rendus (plus d'effet de clignotement).
+ - Gestion propre de la lumière.
+ - Création d'un moteur de rendu (engine)
+ - Gestion du temps pour le déplacement des objets (méthode abstraite 
+   doTransf(long time) dans la classe Shape.
+ - Possibilité de création simplifié d'objet par rotation de point (voir classe
+   Sphere, Cylindre et Cone).
+ - Création d'une caméra pour déplacement dans le monde 3D.
+A faire :
+ - placage de texture.
+ - ombrage gouraud.
+ - Système d'animation par articulation.
+ - Dauphin.
+ - 1 tonne d'autres choses auxquelles j'ai pas encore pensé !

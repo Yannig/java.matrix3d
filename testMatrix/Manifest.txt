@@ -1,0 +1,8 @@
+Main-Class: testMatrix.testEngine
+Implementation-Title: "Matrix3D" 
+Implementation-Version: "v0.7"
+Implementation-Vendor: "Yansolo, Cyber Azerty Club."
+
+Name: matrix3D/
+
+Name: testMatrix/

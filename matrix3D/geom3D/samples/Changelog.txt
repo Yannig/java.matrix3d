@@ -1,0 +1,31 @@
+Liste de modifications apportées pour chacune des classes du répertoire matrix3D.geom3D.samples
+
+
+
+Pour toutes les classes :
+le 19 novembre par Perré Y. (v0.3) :
+  - remise à niveau depuis les modifications de Matrix v0.2
+
+A partir du 7 décembre 2001, toutes les formes de type cone, cylindre et sphere sont
+crées à l'aide de la méthode :
+    public void doRotation(int nbOfRotation,
+                           int startingPoint,
+                           int endingPoint,
+                           int link,
+                           Vertex top,
+                           Vertex bottom);
+  - nbOfRotation : nombre de rotation désirée pour former la figure.
+  - startingPoint : début dans le tableau interne points de la classe du motif à 
+    reproduire
+  - endingPoint : dernier point du motif
+  - link : type de raccord effectué au sommet :
+        - NONE : pas d'opération de jonction
+        - LINK_BOTTOM_WITH_POINT : relie le bas avec le vertex bottom
+        - LINK_UP_WITH_POINT : relie le gaut avec le Vertex top
+        - LINK_BOTH_WITH_POINT : relie le haut et le bas
+        - CREATE_BOTTOM_SURFACE : crée une surface sur la surface du bas
+        - CREATE_UP_SURFACE : idem en haut
+        - CREATE_BOTH_SURFACE : crée les deux surfaces.
+  - top : utilisé dans le cas où le bit LINK_UP_WITH_POINT est à 1. N'a aucune
+    utilité sinon (=null);
+  - bottom : idem avec le bit LINK_BOTTOM_WITH_POINT

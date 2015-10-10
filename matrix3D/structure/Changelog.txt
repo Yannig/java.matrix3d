@@ -1,0 +1,55 @@
+Liste de modifications apportées pour chacune des classes du répertoire matrix3D.structure
+
+------------------------------------------
+CommonVector
+------------------------------------------
+Création : le 22 novembre 2001 par Perré Y.
+
+------------------------------------------
+DrawableElementVector :
+------------------------------------------
+Création : le 19 novembre 2001 par Perré Y.
+Modifications :
+ le 22 novembre par Perré Y. :
+  - ouverture de la structure vers l'extérieur (champ = public)
+  - modification dû au changement de la classe surface
+  - SurfaceVector devient DrawableElementVector
+  - Héritage de la classe CommonVector
+
+------------------------------------------
+HeapQueue :
+------------------------------------------
+Création : le 12 novembre 2001 par Perré Y.
+Modifications :
+ le 22 novembre 2001 par Perré Y. :
+  - héritage de la classe CommonVector
+
+------------------------------------------
+LightVector :
+------------------------------------------
+Création : le 25 novembre 2001 par Perré Y.
+Modifications :
+ le 11 décembre 2001 par Perré Y. :
+  - profonde modification et débogage (ça marche !)
+
+------------------------------------------
+MatrixVector :
+------------------------------------------
+Création : le 4 décembre 2001 par Perré Y.
+Modifications :
+  le 7 février 2002 par Perré Y. :
+   - Diminution de la consommation des objets de transformation affine
+------------------------------------------
+ObjectVector :
+------------------------------------------
+Création : le 22 novembre 2001 par Perré Y.
+Modifications :
+
+------------------------------------------
+PointVector :
+------------------------------------------
+Création : le 19 novembre 2001 par Perré Y.
+Modifications :
+ le 22 novembre par Perré Y. :
+  - la classe posséde maintenant tous ces champs public
+  - héritage de la classe CommonVector
